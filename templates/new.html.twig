@@ -8,12 +8,12 @@
 
     {% block body  %}
         {{ header.header() }}
-            <h1>Přidejte nového Yetiho</h1>
+            <h1 class="text-center">Přidejte nového Yetiho</h1>
 
-
+<div class="text-center input-ce">
             {{ form_start(form) }}
             {{ form_widget(form) }}
             <button class="btn btn-dark" type="submit">Přidat</button>
         {{ form_end(form) }}
-
+        </div>
     {% endblock %}

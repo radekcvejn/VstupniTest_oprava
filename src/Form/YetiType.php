@@ -14,11 +14,11 @@ class YetiType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name',  TextType::class)
-            ->add('height',NumberType::class)
-            ->add('weight',NumberType::class)
-            ->add('age',NumberType::class)
-            ->add('location',TextType::class)
+            ->add('name',  TextType::class, ['label' => 'Jméno'])
+            ->add('height',NumberType::class, ['label' => 'Výška'])
+            ->add('weight',NumberType::class, ['label' => 'Váha'])
+            ->add('age',NumberType::class, ['label' => 'Věk'])
+            ->add('location',TextType::class, ['label' => 'Lokace'])
         ;
     }
 

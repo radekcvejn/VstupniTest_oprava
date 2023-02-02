@@ -23,8 +23,9 @@ class YetiRatingType extends AbstractType
                     '4' => 4,
                     '5' => 5
                 ],
-                'expanded' => true,
-                'multiple' => false
+                'expanded' => false,
+                'multiple' => false,
+                'label' => 'hodnoceni'
             ]);
     }
 

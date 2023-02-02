@@ -7,17 +7,19 @@
 
 {% block body%}
     {{ header.header() }}
-    <h1>Náhodný Yeti</h1>
+   <div class="text-center">
+    <h1>Náhodný Yeti</h1><br>
     <p>Yeti, kterého jsem ti náhodně vybral má ID: {{ nahodnyYeti.id }}</p>
     <br>
-    <p>Jmeno: {{ nahodnyYeti.name }}</p>
+    <p>Jméno: {{ nahodnyYeti.name }}</p>
     <p>Výška: {{ nahodnyYeti.height }}</p>
     <p>Váha: {{ nahodnyYeti.weight }}</p>
     <p>Věk: {{ nahodnyYeti.age }}</p>
-
+    </div>
+    <div class="d-flex justify-content-center">
         <form action="{{ path('yeti_rate') }}" method="post">
             <input type="hidden" name="yeti_id" value="{{ nahodnyYeti.id }}">
                 <button type="submit">Ohodnotit</button>
         </form>
-
+    </div>
 {% endblock %}
