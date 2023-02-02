@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+ {% import 'header.html.twig' as header %}
+{% block title %} Hodnocení{% endblock %}
+{% block body %}
+    {{ header.header() }}
+<h2 class="text-center">Ohodnoť yetiho</h2>
+<form  class="form-floating" action="{{ path('yeti_rate',{'yeti_id':yeti_id.id} )}}" method="post">
+    {{ form_widget(form) }}
+    <button type="submit">Uložit hodnoceni</button>
+</form>
+{% endblock %}

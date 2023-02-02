@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+ {% import 'header.html.twig' as header %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
+{% endblock %}
+{% block title %}Yeti{% endblock %}
+
+{% block body%}
+    {{ header.header() }}
+    <h1>Náhodný Yeti</h1>
+    <p>Yeti, kterého jsem ti náhodně vybral má ID: {{ nahodnyYeti.id }}</p>
+    <br>
+    <p>Jmeno: {{ nahodnyYeti.name }}</p>
+    <p>Výška: {{ nahodnyYeti.height }}</p>
+    <p>Váha: {{ nahodnyYeti.weight }}</p>
+    <p>Věk: {{ nahodnyYeti.age }}</p>
+
+        <form action="{{ path('yeti_rate') }}" method="post">
+            <input type="hidden" name="yeti_id" value="{{ nahodnyYeti.id }}">
+                <button type="submit">Ohodnotit</button>
+        </form>
+
+{% endblock %}

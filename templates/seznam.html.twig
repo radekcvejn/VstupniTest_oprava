@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+ {% import 'header.html.twig' as header %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/global.scss') }}">
+{% endblock %}
+{% block title %}Seznam Yeti{% endblock %}
+
+{% block body  %}
+    {{ header.header() }}
+    <h1 class="text-center ">Seznam Yeti</h1>
+    <div class="d-flex justify-content-center">
+    <table class="table ">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Jméno</th>
+            <th>Výška</th>
+            <th>Váha</th>
+            <th>Věk</th>
+            <th>Lokace</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for yeti in yetis %}
+            <tr>
+                <td>{{ yeti.id }}</td>
+                <td>{{ yeti.name }}</td>
+                <td>{{ yeti.height }}</td>
+                <td>{{ yeti.weight }}</td>
+                <td>{{ yeti.age }}</td>
+                <td>{{ yeti.location }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+ {% import 'header.html.twig' as header %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/global.scss') }}">
+{% endblock %}
+{% block title %}Přidaní Yeti{% endblock %}
+
+
+    {% block body  %}
+        {{ header.header() }}
+            <h1>Přidejte nového Yetiho</h1>
+
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn btn-dark" type="submit">Přidat</button>
+        {{ form_end(form) }}
+
+    {% endblock %}

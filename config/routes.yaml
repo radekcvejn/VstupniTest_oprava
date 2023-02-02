@@ -1,0 +1,19 @@
+yeti_index:
+    path: /
+    controller: App\Controller\YetiController::index
+
+yeti_seznam:
+    path: /seznam
+    controller: App\Controller\YetiController::seznam
+yeti_pridej:
+    path: /new
+    controller: App\Controller\YetiController::pridat
+yeti_rate:
+    path: /rate
+    controller: App\Controller\YetiController::rateYeti
+yeti_nahodny:
+    path: /yeti
+    controller: App\Controller\YetiController::zobrazNahodneho
+yeti_stats:
+    path: /stats
+    controller: App\Controller\YetiController::statistikyHodnoceni

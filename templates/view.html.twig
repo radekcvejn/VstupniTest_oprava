@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Základní info<h2>
+            <ul>
+                <li>Name:{{ yeti.name }}</li>
+                <li>Height:{{ yeti.height }}</li>
+                <li>Weight:{{ yeti.weight }}</li>
+                <li>Age:{{ yeti.age }}</li>
+                <li>Location{{ yeti.location }}</li>
+            </ul>
+{% endblock %}

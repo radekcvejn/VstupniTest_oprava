@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+ {% import 'header.html.twig' as header %}
+{% block body %}
+   {{ header.header()}}
+<h2 class="text-center">10 nejlépe hodnocených Yeti</h2>
+
+    <table class="table">
+        <tr>
+                <thead>
+            <th>Jméno</th>
+            <th>Výška</th>
+            <th>Váha</th>
+            <th>Věk</th>
+            <th>Lokace</th>
+            <th>Průměrné hodnocení</th>
+        </tr>
+                </thead>
+        <tbody>
+        {% for yeti in yetis %}
+        <tr>
+            <td>{{ yeti.name }}</td>
+            <td>{{ yeti.height }}</td>
+            <td>{{ yeti.weight }}</td>
+            <td>{{ yeti.age }}</td>
+            <td>{{ yeti.location }}</td>
+            <td>{{ yeti.avg_rating| round(2) }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

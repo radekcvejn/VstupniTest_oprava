@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+ {% import 'header.html.twig' as header %}
+
+{% block title %}Statistiky{% endblock %}
+
+{% block body %}{{ header.header() }}
+
+    <h1>Statistiky</h1>
+    <table class="table">
+        <tr>
+            <th>Datum</th>
+            <th>Průměrné hodnocení</th>
+        </tr>
+        {% for statistic in statistics %}
+            <tr>
+                <td>{{ statistic.date }}</td>
+                <td>{{ statistic.averageRating |round(2) }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
